@@ -1,0 +1,141 @@
+<div data-page="TD_registro" class="page" ng-controller="topdoc_registro" >
+  <div class="navbar header">
+    <div class="navbar-inner td-nav-estilo-blanco">
+      <div class="left sliding"><a href="index.html" class="link icon-only"><i class="fa fa-chevron-left td-back"></i></a></div>
+      <div class="center td-nav-center"><h3>Registro</h3></div>
+      <div class="right"></div>
+      </div>
+  </div>
+
+  <div class="page-content hide-bars-on-scroll" >
+<!--     <div class="loginsimag row"><img  src="img/icon.png" alt="">
+    </div> -->
+      <div class="clear"></div>
+       <!-- <form id="td-form-registro" data-toggle="validator" role="form"> -->
+       <form id="td-form-registro" class="form-registro" method="POST" data-toggle="validator" role="form">
+
+      <div class="list-block td-centrado">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <!-- <div class="item-title label">E-mail</div> -->
+                <div class="item-input">
+                  <input class="style login3" type="email" name="correo" ng-model="correo" id="correo" placeholder="Correo electrónico">
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+            </div>
+          </li>
+<!-- 'correo''password''telefono''genero' -->
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <!-- <div class="item-title  label">Password</div> -->
+                <div class="form-group">
+                  <div class="item-input">
+                    <input type="password" data-minlength="8" data-match-error="6 Caracteres minimo" class="form-control" name="password" ng-model="password" id="inputPassword" placeholder="Contraseña" required>
+                  </div>
+                  <div class="help-block with-errors">*Mínimo 8 caracteres</div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <!-- <div class="item-title  label">Password</div> -->
+                <div class="form-group ">
+                  <div class="item-input">
+                    <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Las constraseñas no coinciden" placeholder="Confirmar contraseña" required>
+                  </div>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+<!--           <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title  label">Password</div>
+                <div class="item-input form-group">
+                  <input type="password" placeholder="Contraseña" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="La contraseña no coincide"/>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+            </div>
+          </li> -->
+          
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <!-- <div class="item-title  label">Género</div> -->
+                <div class="item-input select-item" >
+                  <select name="genero" ng-model="genero" id="genero">
+                    <option value="" disabled selected>Género</option>
+                    <option value="1">Hombre</option>
+                    <option value="2">Mujer</option>
+                  </select>
+                <!--</div><i class="icon icon-form-checkbox"></i>-->
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+              <div class="help-block with-errors">
+              <b>Topdoc</b> te enviará un SMS para verificar tu número de teléfono.</div>               
+                <div class="item-input">
+                  <input type="tel" name="telefono" ng-model="telefono" id="telefono" placeholder="número de teléfono"/>
+                </div>
+                <div class="help-block with-errors">*10 dígitos</div> 
+              </div>
+            </div>
+          </li>
+        
+          <li>
+            <label class="label-radio item-content">
+              <!-- Checked by default -->
+              <!-- <input type="radio" name="my-radio" ng-model="confirmed" ng-change="change()"> -->
+              <input type="checkbox" ng-model="confirmed" ng-change="change()" />
+              <!-- <input type="checkbox" ng-model="confirmed" id="ng-change-example2" /> -->
+              <div class="item-media">
+                <i class="icon icon-form-radio"></i>
+              </div>
+              <div class="item-inner">
+                <div class="item-title td-terminos-txt">Acepto <a href="td-terminos.html">Términos y Condiciones</a></div>
+              </div>
+            </label>
+<!--             <tt>debug = {{confirmed}}</tt><br/>
+            <tt>counter = {{counter}}</tt><br/> -->
+          </li>
+        </ul>
+      </div>
+      </form>
+
+
+
+<!--       <div class="buttonbar row no-gutter">
+            <a href="td-tour.html" class=" button col-100 colorbtngris1">REGISTRARME</a>
+      </div> -->
+  </div>
+
+<!--     <div class="toolbar toolbar-bottom ">
+      <div id ="td-bottom" class="toolbar-inner link colorbtngris1" >
+        <div class="left"></div>
+        <div class="center sliding" style="left: 0px;">REGISTRARME</div>
+        <div class="right"> </div>
+      </div>
+    </div> -->
+
+
+    <div class="toolbar toolbar-bottom ">
+      <div class="buttonbar row no-gutter">
+         <input type="submit" id ="td-bottom" class="colorbtngris1 bt-bottom col-100" value="REGISTRARME" ng-click="registro();">
+      </div>
+    </div>
+
+
+</div>

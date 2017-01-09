@@ -1,0 +1,287 @@
+<div data-page="TD_MEDICOS" class="page navbar-fixed">
+  <div class="navbar">
+    <div class="navbar-inner td-nav-estilo-blanco">
+      <div class="left sliding"><a href="#" data-panel="left" class="open-panel link icon-only"><i class="fa fa-bars td-list"></i></a></div>
+        <div class="center td-nav-center-logo">Médicos</div>
+        <div class="right sliding td-logo-perfil"></div>
+    </div>
+  </div>
+  <!-- TD MENU PERFIL -->
+  <div class="toolbar tabbar td-bar-perfildoc">
+        <div class="toolbar-inner td-bar-perfildoc-inner">
+          <a href="td-profile.html" class="td-perfil-link">
+              <span class="icon-group-6"></span></a>
+          <a href="td-pacientes.html" class="active td-perfil-link">
+            <span class="icon-group-9"></span>
+          </a>
+          <a href="#link3" class=" td-perfil-link td-proximamente">
+            <span class="icon-group-7"></span>
+          </a>
+          <a href="td-mensajes.html" class=" td-perfil-link">
+            <span class="icon-group-8"></span>
+          </a>
+          <a href="td-caja.html" class=" td-perfil-link ">
+            <span class="icon-group-12"></span>
+          </a>
+        </div>
+    </div>
+    
+<!-- TD INFORMACION DOC-->
+<div class="page-content medicos-lista">
+  <div class="content-block">
+    <!-- Buttons row as tabs controller -->
+    <div class="buttons-row">
+      <!-- Link to 1st tab, active -->
+      <a href="#tab1" class="tab-link active button">Mis Doctores</a>
+      <!-- Link to 2nd tab -->
+      <a href="#tab2" class="tab-link button">Encontrar Doctores</a>
+    </div>
+  </div>
+  <!-- Tabs, tabs wrapper -->
+  <div class="tabs">
+    <!-- Tab 1, active by default -->
+    <div id="tab1" class="tab active">
+        <!---->
+        <div class="list-block media-list">
+        <ul>
+          <li class="doctores-lista">  
+              <div class="item-content">
+                
+                <div class="item-inner">
+                      <img src="img/td-foto-perfil-dra1@3x.png" class="item-paciente" alt="">
+                  <div class="item-title">
+                    Dra. Laura Michelle Velten Aguirre
+                  </div>
+                  <div class="item-text">
+                      <div>
+                        <span class="icon-group-1"></span>
+                        $50.00
+                      </div>
+                      <div>
+                        <span class="icon-group-2"></span>
+                      $950.00
+                      </div>
+                      <div>
+                        <span class="icon-group-4"></span>
+                      $500.00
+                      </div>
+                  </div>
+                  <div class="item-subtitle stars">
+                    <span class="icon-star active-s"></span>
+                    <span class="icon-star active-s"></span>
+                    <span class="icon-star active-s"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                  </div>
+                  <div class="item-subtitle">
+                    Médico General
+                  </div>
+                  
+                </div>
+              </div>           
+            </li>
+
+            <li class="doctores-lista">  
+              <div class="item-content">
+                
+                <div class="item-inner">
+                      <img src="img/td-foto-perfil-dra1@3x.png" class="item-paciente" alt="">
+                  <div class="item-title">
+                    Dr. Rogelio Chávez Pertierra
+                  </div>
+                  <div class="item-text">
+                      <div>
+                        <span class="icon-group-1"></span>
+                        $50.00
+                      </div>
+                      <div>
+                        <span class="icon-group-2"></span>
+                      $950.00
+                      </div>
+                      <div>
+                        <span class="icon-group-4"></span>
+                      $500.00
+                      </div>
+                  </div>
+                  <div class="item-subtitle stars">
+                    <span class="icon-star active-s"></span>
+                    <span class="icon-star active-s"></span>
+                    <span class="icon-star active-s"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                  </div>
+                  <div class="item-subtitle">
+                    Médico General
+                  </div>
+                  
+                </div>
+              </div>           
+            </li>
+        </ul>
+        </div>
+        <!---->
+      
+    </div>
+    <!-- Tab 2 -->
+    <div id="tab2" class="tab">
+     <!---->
+      <div class="row msj-search">
+             <!-- Search Bar -->
+              <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init col-100">
+                <div class="searchbar-input">
+                  <input type="search" placeholder="Buscar por nombre del doctor…">
+                </div>
+                <a href="" class="button buscar"></a>
+              </form> 
+              
+        </div>
+
+        <div class="list-block td-centrado">
+          <div class="item-content"><h2>Filtro:</h2></div>
+              <ul >
+                <li class="especialidad">
+                  <div class="item-content">
+                    <div class="item-inner col-70">
+                     <div class="item-title  label">Especialidad</div> 
+                      <div class="item-input select-item" >
+                        <select name="especialidad" ng-model="especialidad" id="especialidad">
+                          <option value="" disabled selected>Selecciona una…</option>
+                          <option value="1">Especialidad</option>
+                          <option value="2">Especialidad</option>
+                        </select>
+                      <!--</div><i class="icon icon-form-checkbox"></i>-->
+                    </div>
+                  </div>
+                </li>
+
+                <li class="especialidad">
+                  <div class="item-content">
+                    <div class="item-inner">
+                       <div class="item-title label">Ubicación</div>
+                      <div class="item-input">
+                        <input class="style login3" type="text" name="" ng-model="correo" id="correo" placeholder="Ingresa una ubicación para orientar o excluir…">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="servicios-medicos">
+                   <div class="item-content"><h2>Servicios</h2></div>
+                    <!---->
+                     <!---->
+                  <div class="list-block">
+                        <!-- Single chekbox item -->
+                        <div class="row">
+                          <div col-30>
+                          <label class="label-checkbox item-content">
+                            <div class="item-inner">
+                                <span class="icon-group-1"></span>
+                            </div>
+                            <!-- Checked by default -->
+                            <input type="checkbox" name="my-checkbox" value="remota" checked="checked">
+                            <div class="item-media">
+                              <i class="icon icon-form-checkbox"></i>
+                            </div>
+                          </label>
+                        </div>
+                        <!-- Another chekbox item -->
+                        <div col-30>
+                          <label class="label-checkbox item-content">
+                            <div class="item-inner">
+                              <span class="icon-group-2"></span>
+                            </div>
+                            <input type="checkbox" name="my-checkbox" value="domicilio">
+                            <div class="item-media">
+                              <i class="icon icon-form-checkbox"></i>
+                            </div>
+                          </label>
+                        </div>
+                        <!-- Another chekbox item -->
+                        <div col-30>
+                          <label class="label-checkbox item-content">
+                            <div class="item-inner">
+                              <span class="icon-group-4"></span>
+                            </div>
+                            <input type="checkbox" name="my-checkbox" value="consultorio">
+                            <div class="item-media">
+                              <i class="icon icon-form-checkbox"></i>
+                            </div>
+                           
+                          </label>
+                        </div>
+
+                        </div><!--termina el row-->
+                    </div> <!--termina el ist-block-->  
+                   <!---->
+                </li>
+
+                 <!-- Slider (Range input) -->
+                      <li class="tarifa">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="row">Precio Máximo:</div>
+                            
+                            <div class="center">$ <code>{{servicio_tarifa}}</code>.00 mxn 
+                            <button type="button" class="edit"></button>
+                            </div>
+                            <div class="item-input">
+                              <div class="range-slider">
+                                <input type="range" name="servicio_tarifa" ng-model="servicio_tarifa" min="{{min}}"  max="{{max}}" >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                    <li class="servicios-medicos">
+                      <div class="item-content"><h2>Género</h2></div>
+                       <!---->
+                       <div class="list-block">
+                          <!-- Single radio input -->
+                          <div class="row">
+                          <div class="col-50">
+                            <label class="label-radio item-content">
+                              <!-- Checked by default -->
+                              <input type="radio" name="my-radio" value="Mujer" checked="checked">
+                              <div class="item-media">
+                                <i class="icon icon-form-radio"></i>
+                              </div>
+                              <div class="item-inner">
+                                <span class="icon-group-43"></span>
+                                <div class="item-title">Mujer</div>
+                              </div>
+                            </label>
+                          </div>
+                          <!-- Another radio input -->
+                          <div class="col-50">
+                            <label class="label-radio item-content">
+                              <input type="radio" name="my-radio" value="Hombre">
+                              <div class="item-media">
+                                <i class="icon icon-form-radio"></i>
+                              </div>
+                              <div class="item-inner">
+                                <span class="icon-group-44"></span>
+                                <div class="item-title">Hombre</div>
+                              </div>
+                            </label>
+                          </div>
+                       </div>
+                      </div>    
+                      <!---->
+                    </li>
+
+                    <li>
+                      <div class="row no-gutter">
+                        <div  class="colorbtngris1 bt-bottom col-60">000 Doctores Disponibles</div>
+                        <a href="#" class="colorbtngris1 bt-bottom col-40">Resultados<span class="icon-group-36"></span></a>
+                    </div>
+                    </li>
+              </ul>
+        </div> 
+     
+     <!---->
+    </div>
+  
+  </div>
+</div>

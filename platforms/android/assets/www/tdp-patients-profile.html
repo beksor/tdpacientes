@@ -1,0 +1,569 @@
+<script>
+        $(document).ready(function(){ 
+          var myApp = new Framework7(); 
+   
+          var mySwiper = myApp.swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationHide: false,
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+          });     
+        });
+</script>  
+<div class="page page-content navbar-fixed block-nav">
+  <div class="navbar title-bar " id="block-profile">
+    <div class="overlay"></div>
+    <div class="navbar-inner">
+      <div class="left"><a href="index.html" class="back link icon-only"></a></div>
+
+      <div class="center td-nav-center-title ">
+      
+        <h3>Historia Clínica Electrónica</h3>
+      </div>
+      <div class="right"></div>
+    </div>
+
+    <div class="row mas-profile-p">
+      <div class="col-33 btn-back">
+        <a href="" class="button"><span class="icon-group-29"></span></a>
+        Fondo
+        <span class="icon-group-30"></span>
+      </div>
+
+      <div class="col-33 imagen-perfil">
+        <!--<span><img src="img/foto-icon.png" alt=""></span>-->
+        <a class="button add-img"><span class="icon-group-29"></span></a>
+      </div>
+
+      <div class="col-33 log">logo</div>
+      <div class="col-100"><h1>Imagen de Perfil<span class="icon-group-30"></span></h1></div>
+    </div>
+
+    <div class="row datos-profile-p">
+      <div class="item-title col-100">Fecha de Nacimiento:</div>
+          <div class="item-inner col-20">
+              <div class="item-input select-item" >
+                  <select name="Día" ng-model="Día" id="Día">
+                    <option value="" disabled selected>Día</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                  </select>
+              </div>
+          </div>
+          <div class="item-inner col-40">
+              <div class="item-input select-item" >
+                  <select name="Mes" ng-model="Mes" id="Mes">
+                    <option value="" disabled selected>Mes</option>
+                    <option value="1">Septiembre</option>
+                    <option value="2">Octubre</option>
+                  </select>
+              </div>
+          </div>
+          <div class="item-inner col-30">
+              <div class="item-input select-item" >
+                  <select name="Año" ng-model="Año" id="Año">
+                    <option value="" disabled selected>Año</option>
+                    <option value="1">1990</option>
+                    <option value="2">1990</option>
+                  </select>
+              </div>
+          </div>
+
+    </div>
+  </div>
+<!---->
+  <div id="" class="tab profile-content" >
+
+  <div class="list-block inputs-list ">
+      
+  <div class="content-block">
+    <!-- Buttons row as tabs controller -->
+    <div class="buttons-row">
+      <!-- Link to 1st tab, active -->
+      <a href="#tab1" class="tab-link active button">
+        <span class="notific">
+        <span class="icon-group-20"></span>
+        Perfil</span>
+      </a>
+      <!-- Link to 2nd tab -->
+      <a href="#tab2" class="tab-link button">
+      <span class="notific">Estilo de Vida</span></a>
+      <!-- Link to 3rd tab -->
+      <a href="#tab3" class="tab-link button">
+      <span class="notific">Antecedentes</span></a>
+       <a href="#tab4" class="tab-link button">
+       <span class="notific">Reportes</span></a>
+    </div>
+  </div>
+
+  <!-- Tabs, tabs wrapper -->
+  <div class="tabs">
+    <!-- Tab 1, active by default -->
+    <div id="tab1" class="tab active">
+      <div class="content-block">
+      <ul>
+        <li class="item-content historial-clinico">
+          <div class="item-inner">
+           <div class="row">
+             <div class="item-title col-70">Alergias</div>
+             <div class="item-after col-30">
+              <button class="mas" ng-click="">Agregar</button>
+             </div>
+             <div class="item-after col-100 cont-perf-info">Ninguna</div>
+             <div class="item-after col-100 edit-info">SIN EDICIÓN</div>
+            </div>
+          </div>
+        </li>
+
+        <li class="item-content historial-clinico">
+          <div class="item-inner">
+           <div class="row">
+             <div class="item-title col-70">
+             Condiciones Especiales
+             </div>
+             <div class="item-after col-30">
+              <a class="mas" ng-click="">Agregar</a>
+             </div>
+             <div class="item-after col-100 cont-perf-info">Ninguna</div>
+             <div class="item-after col-100 edit-info">SIN EDICIÓN</div>
+            </div>
+          </div>
+        </li>
+
+         <li class="item-content historial-clinico">
+          <div class="item-inner">
+           <div class="row">
+             <div class="item-title col-70">
+             Índice de Masa Corporal
+             </div>
+             <div class="item-after col-30"></div>
+             <div class="item-after col-100 cont-perf-info">17.72</div>
+             <div class="item-after col-100 edit-info">CÁLCULO AUTOMÁTICO</div>
+            </div>
+          </div>
+        </li>
+
+        <li class="item-content historial-clinico">
+          <div class="item-inner">
+           <div class="row">
+             <div class="item-title col-70">
+             Grupo Étnico
+             </div>
+             <div class="item-after col-30"></div>
+             <div class="item-after col-100 cont-perf-info">
+              Hispano, Caucásico</div>
+             <div class="item-after col-100 edit-info">
+              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+             </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="item-content historial-clinico">
+          <div class="item-inner">
+           <div class="row">
+             <div class="item-title col-70">
+             Lugar de Residencia
+             </div>
+             <div class="item-after col-30"></div>
+             <div class="item-after col-100 cont-perf-info">
+              Tlalnepantla, Estado de México.
+              </div>
+             <div class="item-after col-100 edit-info">
+              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+             </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="item-content historial-clinico">
+          <div class="item-inner">
+           <div class="row">
+             <div class="item-title col-70">
+             C.U.R.P.
+             </div>
+             <div class="item-after col-30"></div>
+             <div class="item-after col-100 cont-perf-info">
+              TEVE130402MDFRLMA8
+              </div>
+             <div class="item-after col-100 edit-info">
+              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+             </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="item-content historial-clinico">
+          <div class="item-inner">
+           <div class="row">
+             <div class="item-title col-70">
+             Teléfono de Contacto
+             </div>
+             <div class="item-after col-30"></div>
+             <div class="item-after col-100 cont-perf-info">
+              53611405
+              </div>
+             <div class="item-after col-100 edit-info">
+              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+             </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="item-content historial-clinico">
+          <div class="item-inner">
+           <div class="row">
+             <div class="item-title col-70">
+             Correo Electrónico
+             </div>
+             <div class="item-after col-30"></div>
+             <div class="item-after col-100 cont-perf-info">
+              marlene_sandoval@gmail.com
+              </div>
+             <div class="item-after col-100 edit-info">
+              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+             </div>
+            </div>
+          </div>
+        </li>
+       </ul>
+        <!---->
+      </div>
+    </div>
+<<<<<<< HEAD
+     <!-- Tab 2 -->
+    <div id="tab2" class="tab">
+      <div class="content-block">
+        <ul>
+           <a href="" class="item-content historial-consulta" >
+          <div class="item-media "></div>
+          <div class="item-inner">
+           <div class="row">
+             <div class="item-title col-70">Elisa Rojas Sandoval</div>
+             <div class="item-after col-30">22/08/16</div>
+             <div class="item-after col-100">Vómito secundario a sobredisten…</div>
+=======
+
+    <!-- Tab 2 -->
+    <div id="tab2" class="tab">
+>>>>>>> master
+      <div class="content-block slide-tablas">
+      <!---->
+          <div class="swiper-custom">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <span>
+                    <img src="img/grafica-crecimiento@2x.png" alt="" style="width: 100%;">
+                    <h2>Tabla de Altura</h2>
+                  </span>
+                </div>
+                <div class="swiper-slide"><span>Slide 2</span></div>
+                <div class="swiper-slide"><span>Slide 3</span></div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+<<<<<<< HEAD
+        </a>
+         <a href="" class="item-content historial-consulta" >
+          <div class="item-media "></div>
+          <div class="item-inner">
+           <div class="row">
+             <div class="item-title col-70">Elisa Rojas Sandoval</div>
+             <div class="item-after col-30">22/08/16</div>
+             <div class="item-after col-100">Vómito secundario a sobredisten…</div>
+=======
+>>>>>>> master
+      <!---->
+      
+        <ul class="">
+          <li class="item-content historial-crecimiento">
+            <div class="item-inner">
+             <div class="row">
+               <div class="item-title col-33">Altura</div>
+               <div class="item-title col-33">Peso</div>
+               <div class="item-title col-33">Cráneo</div>
+
+               <div class="item-after col-33">92 cms</div>
+               <div class="item-after col-33">14.6 kg</div>
+               <div class="item-after col-33">45 cms</div>
+               <div class="col-90 edit-info">ÚLTIMA EDICIÓN: 12/06/16, 5:08 PM, DRA. LAURA MICHELLE VELTEN…</div>
+              </div>
+            </div>
+<<<<<<< HEAD
+          </div>
+        </a>
+=======
+>>>>>>> master
+          </li>
+
+          <li class="item-content historial-crecimiento">
+            <div class="item-inner">
+             <div class="row">
+               <div class="item-title col-33">Altura</div>
+               <div class="item-title col-33">Peso</div>
+               <div class="item-title col-33">Cráneo</div>
+
+               <div class="item-after col-33">92 cms</div>
+               <div class="item-after col-33">14.6 kg</div>
+               <div class="item-after col-33">45 cms</div>
+               <div class="col-90 edit-info">ÚLTIMA EDICIÓN: 12/06/16, 5:08 PM, DRA. LAURA MICHELLE VELTEN…</div>
+              </div>
+            </div>
+          </li>
+
+          <li class="item-content historial-crecimiento">
+            <div class="item-inner">
+             <div class="row">
+               <div class="item-title col-33">Altura</div>
+               <div class="item-title col-33">Peso</div>
+               <div class="item-title col-33">Cráneo</div>
+
+               <div class="item-after col-33">92 cms</div>
+               <div class="item-after col-33">14.6 kg</div>
+               <div class="item-after col-33">45 cms</div>
+               <div class="col-90 edit-info">ÚLTIMA EDICIÓN: 12/06/16, 5:08 PM, DRA. LAURA MICHELLE VELTEN…</div>
+              </div>
+            </div>
+          </li>
+
+          <li class="item-content historial-crecimiento">
+            <div class="item-inner">
+             <div class="row">
+               <div class="item-title col-33">Altura</div>
+               <div class="item-title col-33">Peso</div>
+               <div class="item-title col-33">Cráneo</div>
+
+               <div class="item-after col-33">92 cms</div>
+               <div class="item-after col-33">14.6 kg</div>
+               <div class="item-after col-33">45 cms</div>
+               <div class="col-90 edit-info">ÚLTIMA EDICIÓN: 12/06/16, 5:08 PM, DRA. LAURA MICHELLE VELTEN…</div>
+              </div>
+            </div>
+          </li>
+
+          <li class="item-content historial-crecimiento">
+            <div class="item-inner">
+             <div class="row">
+               <div class="item-title col-33">Altura</div>
+               <div class="item-title col-33">Peso</div>
+               <div class="item-title col-33">Cráneo</div>
+
+               <div class="item-after col-33">92 cms</div>
+               <div class="item-after col-33">14.6 kg</div>
+               <div class="item-after col-33">45 cms</div>
+               <div class="col-90 edit-info">ÚLTIMA EDICIÓN: 12/06/16, 5:08 PM, DRA. LAURA MICHELLE VELTEN…</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tab 3 -->
+    <div id="tab3" class="tab">
+      <div class="content-block">
+        <ul class="antecedentes-profile">
+           <h1>Antecedentes Mórbidos</h1>
+          <li class="item-content historial-clinico">
+            <div class="item-inner">
+             <div class="row">
+               <div class="item-title col-70">Enfermedades Graves</div>
+               <div class="item-after col-30">
+                <button class="mas" ng-click="">Agregar</button>
+               </div>
+               <div class="item-after col-100 cont-perf-info">Ninguna</div>
+               <div class="item-after col-100 edit-info">SIN EDICIÓN</div>
+              </div>
+            </div>
+          </li>
+          <li class="item-content historial-clinico">
+            <div class="item-inner">
+             <div class="row">
+               <div class="item-title col-70">Operaciones</div>
+               <div class="item-after col-30">
+                <button class="mas" ng-click="">Agregar</button>
+               </div>
+               <div class="item-after col-100 cont-perf-info">Ninguna</div>
+               <div class="item-after col-100 edit-info">SIN EDICIÓN</div>
+              </div>
+            </div>
+          </li>
+          <li class="item-content historial-clinico">
+            <div class="item-inner">
+             <div class="row">
+               <div class="item-title col-70">Traumatismos</div>
+               <div class="item-after col-30">
+                <button class="mas" ng-click="">Agregar</button>
+               </div>
+               <div class="item-after col-100 cont-perf-info">Ninguna</div>
+               <div class="item-after col-100 edit-info">SIN EDICIÓN</div>
+              </div>
+            </div>
+          </li>
+            
+            <h1>Antecedentes Familiares</h1>
+            <li class="item-content historial-clinico">
+            <div class="item-inner">
+             <div class="row">
+               <div class="item-title col-70">Enfermedades</div>
+               <div class="item-after col-30"></div>
+               <div class="item-after col-100 cont-perf-info">- Diabetes, Tía Abuela Materna, desde los 53 años.
+                </div>
+               <div class="item-after col-100 edit-info">
+                 ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+               </div>
+              </div>
+            </div>
+          </li>
+
+            <li class="item-content historial-clinico">
+            <div class="item-inner">
+             <div class="row">
+               <div class="item-title col-70">Fallecimientos</div>
+               <div class="item-after col-30"></div>
+               <div class="item-after col-100 cont-perf-info">-Leucemia, Abuela Materna a los 49 años.
+               </div>
+               <div class="item-after col-100 edit-info">
+               ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+               </div>
+              </div>
+            </div>
+          </li>
+
+            <li class="item-content historial-clinico">
+            <div class="item-inner">
+             <div class="row">
+               <div class="item-title col-70">Inmunizaciones</div>
+               <div class="item-after col-30">
+                <button class="mas" ng-click="">Agregar</button>
+               </div>
+               <div class="item-after col-100 cont-perf-info">BCG, 08/04/16</div>
+               <div class="item-after col-100 edit-info">ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM</div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+     <!-- Tab 4 -->
+    <div id="tab4" class="tab">
+      <div class="content-block reportes-profile">
+      <div class="row">
+        <div class="col-100">
+          <img src="img/grafica-reportes@2x.png" alt="">
+        </div>
+      </div>
+   
+      <!---->
+        <div class="content-block">
+          <!-- Buttons row as tabs controller -->
+          <div class="buttons-row center">
+            <!-- Link to 1st tab, active -->
+            <a href="#tab-sinfiltro" class="tab-link active button">
+            SIN <br> FILTRO</a>
+            <!-- Link to 2nd tab -->
+            <a href="#tab-remota" class="tab-link button"></a>
+            <!-- Link to 3rd tab -->
+            <a href="#tab-domicilio" class="tab-link button"></a>
+            <!-- Link to 4nd tab -->
+            <a href="#tab-consultorio" class="tab-link button"></a>
+            <!-- Link to 5nd tab -->
+            <a href="#tab-mios" class="tab-link button">SÓLO <br> MÍOS</a>
+          </div>
+        </div>
+        <!-- Tabs, tabs wrapper -->
+        <div class="tabs">
+          <!-- Tab 1, active by default -->
+          <div id="tab-sinfiltro" class="tab active">
+            <div class="content-block">
+              <!---->
+                <ul class="">
+                    <a href="" class="item-content historial-remota" >
+                      <div class="item-media"></div>
+                      <div class="item-inner">
+                       <div class="row">
+                         <div class="item-title col-70">Elisa Rojas Sandoval</div>
+                         <div class="item-after col-30">22/08/16</div>
+                         <div class="item-after col-100">Vómito secundario a sobredisten…</div>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="" class="item-content historial-consulta" >
+                      <div class="item-media "></div>
+                      <div class="item-inner">
+                       <div class="row">
+                         <div class="item-title col-70">Elisa Rojas Sandoval</div>
+                         <div class="item-after col-30">22/08/16</div>
+                         <div class="item-after col-100">Vómito secundario a sobredisten…</div>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="" class="item-content historial-consultorio" >
+                      <div class="item-media "></div>
+                      <div class="item-inner">
+                       <div class="row">
+                         <div class="item-title col-70">Elisa Rojas Sandoval</div>
+                         <div class="item-after col-30">22/08/16</div>
+                         <div class="item-after col-100">Vómito secundario a sobredisten…</div>
+                        </div>
+                      </div>
+                    </a>
+                  </ul>
+              <!---->
+            </div>
+          </div>
+          <!-- Tab 2 -->
+          <div id="tab-remota" class="tab">
+            <div class="content-block">
+              <p>This is tab 2 content</p>
+              ...
+            </div>
+          </div>
+          <!-- Tab 3 -->
+          <div id="tab-domicilio" class="tab">
+            <div class="content-block">
+              <p>This is tab 3 content</p>
+              ...
+            </div>
+          </div>
+          <!-- Tab 4 -->
+          <div id="tab-consultorio" class="tab">
+            <div class="content-block">
+              <p>This is tab 4 content</p>
+              ...
+            </div>
+          </div>
+          <!-- Tab 5 -->
+          <div id="tab-mios" class="tab">
+            <div class="content-block">
+              <p>This is tab 5 content</p>
+              ...
+            </div>
+          </div>
+        </div>
+      <!---->
+      
+      
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+  </div><!--Termina el lisblock-->
+        
+      </div>
+<!---->
+
+</div>

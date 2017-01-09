@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html ng-app="TopdocApp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="theme-color" content="#2196f3">
+<title>TOPDOC</title>
+
+
+<!-- Font embedding link goes here -->
+<!-- <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'> -->
+
+<!-- CSS link goes here -->
+<link rel="stylesheet" href="css/framework7.material.min.css">
+<link rel="stylesheet" href="css/framework7.material.colors.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/swipebox.min.css">
+<link rel="stylesheet" href="css/maxframes.css">
+<link rel="stylesheet" href="css/td-estilo.css">
+ 
+<script type="text/javascript" src="js/camara.js" charset="utf-8"> </script>
+</head>
+<!-- <body class="theme-red"> -->
+<body class="theme-red" ng-controller="td-index">
+<!-- barra de estado para dispisitivo -->
+<div class="statusbar-overlay" id="overlay"></div>
+<!-- barra de estado para dispisitivo -->
+
+  <div class="panel-overlay" ></div>
+
+    <!-- TD-MENU -->
+<div class="panel panel-left panel-cover sidebar">
+  <div class="view" >
+    <div class=" ">
+      <div data-page="panel-left" class="sidemenu leftmenusmall gradient">
+        <div class="row">&nbsp;</div>
+        <div class="userprofile">
+                <div class="item-media"><img id="menuImage" class="getfoto" src="img/td-dra1.png" width="44" alt=""/></div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title td-tittext" id="nombre-apellido">Laura Michelle Velten Aguirre</div>
+                  </div>
+                  <!-- <div class="item-subtitle">Mx</div> -->
+                </div>
+        </div>
+        <div class="page-content">
+            <div class="list-block accordion-list">
+              <ul class="menu td-menu">
+                <li>
+                  <a href="#" class="item-link close-panel item-content ">
+                    <div class="item-title">
+
+                    <i class="fa td-ico-1"></i><span>Notificaciones</span>
+                      <!-- <i class="fa fa-bar-chart"></i><span>Notificaciones</span> -->
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link close-panel item-content ">
+                    <div class="item-title">
+                      <i class="fa td-ico-2"></i><span>Cuenta</span>
+                    </div>
+                  </a>
+                </li> 
+                <li>
+                  <a href="#" class="item-link close-panel item-content ">
+                    <div class="item-title">
+                      <i class="fa td-ico-3"></i><span>Seguimiento</span>
+                    </div>
+                  </a>
+                </li> 
+                <li>
+                  <a href="#" class="item-link close-panel item-content ">
+                    <div class="item-title">
+                      <i class="fa td-ico-4"></i><span>Seguridad</span>
+                    </div>
+                  </a>
+                </li> 
+                <li>
+                  <a href="#" class="item-link close-panel item-content ">
+                    <div class="item-title">
+                      <i class="fa td-ico-5"></i><span>Ayuda</span>
+                    </div>
+                  </a>
+                </li> 
+                <li class="td-menu-separador"></li>
+                <li>
+                  <a href="#" class="item-link close-panel item-content " id="logOut">
+                    <div class="item-title">
+                      <i class="fa td-ico-6"></i><span>Cerrar Sesión</span>
+                    </div>
+                  </a>
+                </li> 
+
+
+
+<!-- CONTENIDO LISTA MENU -->
+
+                <li class="td-menu-separador"></li>
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-tasks"></i>TD_Menu</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="#" data-panel="left" class="item-link  close-panel"><span>This is overlay</span></a></li>
+                            <li><a href="#" data-panel="right" class="item-link open-panel"><span>Reavel Sidemenu</span></a></li>
+                            <li><a href="todo.html" class="item-link close-panel"><span>Floating Speed Dial</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-home"></i>TD_Home</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="home.html" class="item-link close-panel"><span>Cover Slider</span></a></li>
+                            <li><a href="home_classic.html" class="item-link close-panel"><span>Classic</span></a></li>                            
+                            <li><a href="home_dashboard.html" class="item-link close-panel"><span>Dashboard</span></a></li>
+                            <li><a href="home_reader.html" class="item-link close-panel"><span>Reader Home</span></a></li>
+                            <li><a href="home_shop.html" class="item-link close-panel"><span>Shop</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-heart"></i>TD_About</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="about.html" class="item-link close-panel"><span>About</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-briefcase"></i>TD_Services</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="services.html" class="item-link close-panel"><span>Services</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-group"></i>TD_Team</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="team.html" class="item-link close-panel"><span>Team</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                  
+                  <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-user"></i>TD_Profile</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="profile1.html" class="item-link close-panel"><span>Profile 1</span></a></li>
+                            <li><a href="profile2.html" class="item-link close-panel"><span>Profile 2</span></a></li>
+                            <li><a href="profile3.html" class="item-link close-panel"><span>Profile 3</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                  
+                  <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-picture-o"></i>TD_Gallery</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="gallery.html" class="item-link close-panel"><span>Gallery 1</span></a></li>
+                            <li><a href="gallery2.html" class="item-link close-panel"><span>Gallery 2</span></a></li>
+                            <li><a href="gallery3.html" class="item-link close-panel"><span>Gallery 3</span></a></li>
+                            <li><a href="gallery4.html" class="item-link close-panel"><span>Masonary 1</span></a></li>
+                            <li><a href="gallery5.html" class="item-link close-panel"><span>Masonary 2</span></a></li>
+                            <li><a href="gallery6.html" class="item-link close-panel"><span>Masonary 3</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                 <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-life-ring"></i>TD_Blog</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="blog.html" class="item-link close-panel"><span>Blog</span></a></li>
+                            <li><a href="blogDetail.html" class="item-link close-panel"><span>Blog Details</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-lock"></i>TD_Login/Register</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="login-screen.html" class="item-link close-panel"><span>Login/Register</span></a></li>
+                            <li><a href="sign-in.html" class="item-link close-panel"><span>Login</span></a></li>
+                            <li><a href="register.html" class="item-link close-panel"><span>Register</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+               
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-check"></i>TD_Todo</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="todo.html" class="item-link close-panel"><span>Todo</span></a></li>
+                            <li><a href="todoadd.html" class="item-link close-panel"><span>Todo Add</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-cart-plus"></i>TD_Shopping</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="shoping_category.html" class="item-link close-panel"><span>Shop</span></a></li>
+                            <li><a href="productlist.html" class="item-link close-panel"><span>Products</span></a></li>
+                            <li><a href="product_details.html" class="item-link close-panel"><span>Product Details</span></a></li>
+                            <li><a href="cart.html" class="item-link close-panel"><span>Cart</span></a></li>
+                            <li><a href="payment.html" class="item-link close-panel"><span>Payment Method</span></a></li>
+                            <li><a href="thankyou.html" class="item-link close-panel"><span>Thank you</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-film"></i>TD_Sliders</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                            <li><a href="swiper.html" class="item-link close-panel item-content"><span>Sliders</span></a></li>
+                            <li><a href="swiper-horizontal.html" class="item-link  close-panel  item-content"><span>Swiper Horizontal</span></a></li>
+                            <li><a href="swiper-vertical.html" class="item-link  close-panel  item-content"><span>Swiper Vertical</span></a></li>
+                            <li><a href="swiper-space-between.html" class="item-link  close-panel  item-content"><span>Space Between Slides</span></a></li>
+                            <li><a href="swiper-multiple.html" class="item-link  close-panel  item-content"><span>Multiple Per Page</span></a></li>
+                            <li><a href="swiper-nested.html" class="item-link  close-panel  item-content"><span>Nested Swipers</span></a></li>
+                            <li><a href="swiper-loop.html" class="item-link  close-panel  item-content"><span>Infinite Loop Mode</span></a></li>
+                            <li><a href="swiper-3d-cube.html" class="item-link  close-panel  item-content"><span>3D Cube Effect</span></a></li>
+                            <li><a href="swiper-3d-coverflow.html" class="item-link  close-panel  item-content"><span>3D Coverflow Effect</span></a></li>
+                            <li><a href="swiper-3d-flip.html" class="item-link  close-panel  item-content">3<span>D Flip Effect</span></a></li>
+                            <li><a href="swiper-fade.html" class="item-link  close-panel  item-content"><span>Fade Effect</span></a></li>
+                            <li><a href="swiper-scrollbar.html" class="item-link  close-panel  item-content"><span>With Scrollbar</span></a></li>
+                            <li><a href="swiper-custom.html" class="item-link   close-panel item-content"><span>Custom Controls</span></a></li>
+                            <li><a href="swiper-parallax.html" class="item-link  close-panel  item-content"><span>Parallax</span></a></li>
+                            <li><a href="swiper-pagination-progress.html" class="item-link   close-panel item-content"><span>Progress Pagination</span></a></li>
+                            <li><a href="swiper-pagination-fraction.html" class="item-link  close-panel  item-content"><span>Fraction Pagination</span></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                  </li>
+                  <li class="accordion-item"><a href="#" class="item-content item-link">
+                    <div class="item-inner">
+                      <div class="item-title"><i class="fa fa-star"></i>TD_Features</div>
+                    </div></a>
+                  <div class="accordion-item-content">
+                    <div class="content-block">
+                        <ul>
+                          <li><a href="fonticons.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Icons</span></div></a></li>
+                          <li><a href="button.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Button</span></div></a></li>
+                          <li><a href="calendar.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Calendar</span></div></a></li>
+                          <li><a href="picker.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Picker</span></div></a></li>
+                          <li><a href="accordion.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Accordian</span></div></a></li>
+                          <li><a href="swipe-delete.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Swipe</span></div></a></li>
+                          <li><a href="typography.html" class="item-link close-panel item-content item-link"><div class="itemmeniinner"><span>Typography</span></div></a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </li>
+                  <li><a href="chart.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-bar-chart"></i><span>Chart (Google)</span></div></a></li> 
+                  <li><a href="map.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>Map</span></div></a></li> 
+                  <li><a href="color-themes.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-th"></i><span>Themes</span></div></a></li>  
+                  <li><a href="contacts.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-user"></i><span>Contact List</span></div></a></li>
+                  <li><a href="messages.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-comment-o"></i><span>Messages</span></div></a></li>
+                  <li><a href="mail.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-envelope"></i><span>Mail</span></div></a></li>
+                  <li><a href="lists.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-music"></i><span>Lists</span></div></a></li>
+                  <li><a href="comingsoon.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-clock-o"></i><span>SOON...</span></div></a></li>
+                  <li><a href="404.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-exclamation-triangle"></i><span>404</span></div></a></li>
+                  <li><a href="contactus.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-paper-plane"></i><span>Contact</span></div></a></li>
+
+<!-- CONTENIDO LISTA MENU -->
+
+                  
+              </ul>
+            </div>
+         
+        </div>
+       <!--  <div class="buttonbar row no-gutter center">
+          <img src="/img/td-logo-perfil@2x.png" alt="" width="80px" style="text-align: center;">
+        </div> -->
+
+      <div class="div center">
+            <a href="td-registro.html" class=" button col-100 "><img src="img/td-logo-perfil@2x.png" alt="" width="80px" style="text-align: center; padding-top: 7%;padding-bottom: 5%;"></a>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TD-MENU -->
+    
+<div class="panel panel-right panel-reveal sidebar">
+  <div class="view">
+    <div class=" ">
+      <div data-page="panel-left" class="sidemenu leftmenusmall gradient">
+        <div class="item-content userprofile">
+                <div class="item-media"><img src="img/pic1.png" width="44"  alt=""/></div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Max Smith</div>
+                  </div>
+                  <div class="item-subtitle">India</div>
+                </div>
+        </div>
+        <div class="page-content" >
+            <div class="inputs-list content-block" >
+                  <h2 class="maintitle  center">Contact us</h2>
+                    <p class="center" >We will be back on your provided email address</p>
+              </div>
+              <div class="list-block">
+                  <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">Your name</div>
+                        <div class="item-input">
+                          <input type="text" placeholder=""/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">E-mail</div>
+                        <div class="item-input">
+                          <input type="email" placeholder=""/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">Phone</div>
+                        <div class="item-input">
+                          <input type="tel" placeholder=""/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="align-top">
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title label">Message/Queries</div>
+                        <div class="item-input">
+                          <textarea class="resizable"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                </div>
+              <div class="content-block"> <a href="home.html" class="button button-fill ">Get in touch</a> </div>
+               <hr>
+            <div class="center content-block ">
+              <div class=""><img src="img/phone.png" alt=""></div>
+              <h2 class=""> 000 000 000 </h2>
+              <p class=""> Call Us </p>
+            </div>
+            <hr>
+            <div class="content-block">
+            <h2 class="center">We are at social</h2>
+            <p class="center">Get connected with us on social</p>
+            <ul class="socials">
+                <li><a href="" class="fb"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="" class="tw"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="" class="gp"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="" class="pin"><i class="fa fa-pinterest"></i></a></li>
+            </ul>
+            </div>
+         
+        </div>
+         <div class="buttonbar row no-gutter">
+                <a href="contactus.html" class=" button button-fill col-100 close-panel">Locate Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+    <!-- TD-INDEX -->
+
+<div class="views pageview" >
+<!-- AQUI ABRIRA LA NUEVA PÁGINA -->
+  <div class="view view-main">
+<!--   <div class="app">
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div> -->
+
+    <div class="pages">
+      <div data-page="TD_index" class="page" >
+        <div class="page-content landingpage" id="background-b">
+          <div class="td-logo main col12 center"> <img src="img/td-logo@3x.png" alt=""> 
+              <div class="td-version pt5 ">
+                  <!-- <h3>Versión Beta</h3> -->
+                  <p class="light td-txt-bienvenida pt30"><img class="ico22px" src="img/td-icodoc@3x.png" alt="">  Versión Beta  <span class="regular">Doctores</span> </p>
+              </div>
+          </div>
+        </div>
+        <div class="toolbar toolbar-bottom ">
+          <div class="buttonbar  row no-gutter">
+              <!-- <a href="sign-in.html" class="colorbtngris1 button-fill button col-50">INICIAR SESIÓN</a> -->
+              <a href="td-login.html" class="colorbtngris1 bt-bottom col-50">INICIAR SESIÓN</a>
+              <a href="td-registro.html" class="colorbtngris1 bt-bottom col-50">REGISTRO</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- JS link goes here --> 
+
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/framework7.min.js"></script> 
+<script type="text/javascript" src="js/jquery.swipebox.js"></script> 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="js/validator.min.js"></script>
+<script type="text/javascript" src="js/md5.js"></script>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+<!-- MEZCLANDO FW7 y ANGULAR JS -->
+<script type="text/javascript" src="js/framework7.angular.hook.js"></script>
+<script type="text/javascript" src="js/angular_framework7_controller.js"></script>
+
+</html>

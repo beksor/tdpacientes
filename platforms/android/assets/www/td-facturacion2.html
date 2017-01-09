@@ -1,0 +1,228 @@
+<script>
+      $(document).ready(function(){
+          var myApp = new Framework7(); 
+               
+            var mySwiper = myApp.swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationHide: false,
+                paginationClickable: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+              });     
+      });
+</script>               
+<div class="page navbar-fixed block-nav">
+  <div class="navbar title-bar">
+    <div class="navbar-inner">
+      <div class="left"><a href="index.html" class="back link icon-only"></a></div>
+
+      <div class="center td-nav-center-title ">
+        <h3>Facturación Automática</h3>
+      </div>
+
+      <div class="right"></div>
+    </div>
+  </div>
+<!---->
+  <div id="" class="tab page-content" style=" background:#fff;">
+
+          <div class="list-block col-100 inputs-list ">
+          <div class="row resume-block margin-75">
+             <!-- Search Bar --> 
+              <div class="col-100 ">
+                <!-- Buttons row as tabs controller -->
+                <div class="buttons-row">
+                
+                  <!-- Link to 1st tab, active -->
+                  <a href="#tab1" class="tab-link active button">INGRESOS</a>
+                  <!-- Link to 2nd tab -->
+                  <a href="#tab2" class="tab-link button">EGRESOS</a>
+                  <!-- Link to 3rd tab -->
+                  <a href="#tab3" class="tab-link button">BALANCE</a>
+                </div>  
+                <div class="col-100 bloq-fecha-fac">
+                 <div class="page-content">
+                      <div class="swiper-custom">
+                        <div class="swiper-container">
+                          <!--<div class="swiper-pagination"></div>-->
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <span>ENERO 2016</span>
+                              <span>$5,680.00</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <span>FEBRERO 2016</span>
+                              <span>$5,680.00</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <span>MARZO 2016</span>
+                              <span>$5,680.00</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <span>ABRIL 2016</span>
+                              <span>$5,680.00</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <span>MAYO 2016</span>
+                              <span>$5,680.00</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <span>JUNIO 2016</span>
+                              <span>$5,680.00</span>
+                            </div>
+                            <div class="swiper-slide">
+                              <span>JULIO 2016</span>
+                              <span>$5,680.00</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    </div>
+                  
+                </div><!---->
+
+              </div>
+          </div><!--termina msj-search-->
+
+             <!-- Tabs, tabs wrapper -->
+              <div class="tabs col-100 bloq-facturacion">
+                  
+                <!-- Tab 1, active by default -->
+                <div id="tab1" class="tab active">
+                  <div class="content-block">
+                    
+                    <!---->
+                      <div class="list-block">
+                      <ul>
+                        <li>
+                          <div class="row item-content">
+                                 
+                            <div class="col-30">
+                                <div class="item-after">TD-18</div>
+                                <div class="item-after">31/08/16</div>
+                            </div>
+                            <div class="col-70">
+                              <div class="item-after ">
+                              Segunda Quincena de Agosto
+                              </div>
+                                <div class="row">
+                                  <div class="item-after col-50 color-green">
+                                  $27,840.30
+                                  </div>
+                                  <div class="item-after col-50">
+                                  Ver Detalle
+                                  </div>
+                                 </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="row item-content">
+                                 
+                            <div class="col-30">
+                                <div class="item-after">TD-18</div>
+                                <div class="item-after">31/08/16</div>
+                            </div>
+                            <div class="col-70">
+                              <div class="item-after ">
+                              Segunda Quincena de Agosto
+                              </div>
+                                <div class="row">
+                                  <div class="item-after col-50 color-red">
+                                  $27,840.30
+                                  </div>
+                                  <div class="item-after col-50">
+                                  Ver Detalle
+                                  </div>
+                                 </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+                <!-- Tab 2 -->
+                <div id="tab2" class="tab">
+                  <div class="content-block">
+                        <!---->
+                      <div class="list-block">
+                      <ul>
+                        <li>
+                          <div class="row item-content">
+                                 
+                            <div class="col-30">
+                                <div class="item-after">TD-19</div>
+                                <div class="item-after">31/08/16</div>
+                            </div>
+                            <div class="col-70">
+                              <div class="item-after ">
+                              Segunda Quincena de Agosto
+                              </div>
+                                <div class="row">
+                                  <div class="item-after col-50 color-green">
+                                  $27,840.30
+                                  </div>
+                                  <div class="item-after col-50">
+                                  Ver Detalle
+                                  </div>
+                                 </div>
+                            </div>
+                          </div>
+                        </li>
+                       
+                      </ul>
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+                <!-- Tab 3 -->
+                <div id="tab3" class="tab">
+                  <div class="content-block">
+                     <!---->
+                      <div class="list-block">
+                      <ul>
+                        <li>
+                          <div class="row item-content">
+                                 
+                            <div class="col-30">
+                                <div class="item-after">TD-20</div>
+                                <div class="item-after">31/08/16</div>
+                            </div>
+                            <div class="col-70">
+                              <div class="item-after ">
+                              Segunda Quincena de Agosto
+                              </div>
+                                <div class="row">
+                                  <div class="item-after col-50 color-green">
+                                  $27,840.30
+                                  </div>
+                                  <div class="item-after col-50">
+                                  Ver Detalle
+                                  </div>
+                                 </div>
+                            </div>
+                          </div>
+                        </li>
+                       
+                      </ul>
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+              </div>
+        
+          </div><!--Termina el lisblock-->
+        
+      <div class="toolbar toolbar-bottom ">
+      <div class="buttonbar row no-gutter">
+         <input type="submit" id ="td-bottom" class="colorbtngris2 bt-bottom col-100" value="REENVIAR COMPROBANTES" ng-click="registro();">
+      </div>
+    </div>
+      </div>
+<!---->
+
+</div>

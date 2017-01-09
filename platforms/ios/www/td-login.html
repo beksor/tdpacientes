@@ -1,0 +1,64 @@
+<div data-page="TD_login" class="page" ng-controller="topdoc_Login">
+<!--   <div class="navbar header">
+    <div class="navbar-inner">
+      <div class="left sliding"><a href="index.html" class="link icon-only"><i class="fa fa-chevron-left"></i></a></div>
+      </div>
+  </div> -->
+
+
+  <div class="page-content logins hide-bars-on-scroll" >
+  <form id="login-form" name="myForm"  method="POST" role="form">
+  <div class="td-logo main col12">
+  <div class="center">
+    <img src="img/td-logo@3x.png" alt=""> 
+  </div>
+      <div class="clear"></div>
+       <!-- <form id="TDFormLogin" action="td-profile.html" method="POST" class="ajax-submit"> -->
+       
+            <div class="list-block ">
+              <ul>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <!-- <div class="item-title label">Correo electrónico</div> -->
+                    <div class="item-input">
+                      <input class="style login3" type="email" name="correo"  ng-model="correo" id="correo" placeholder="Correo electrónico" ng-required="requeridoCorreo">
+                    </div> 
+                  </div>
+                </li>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <!-- <div class="item-title label">Contraseña</div> -->
+                    <div class="item-input cont">
+                      <span id="change" class="eye ">LISTO</span><input class="style login3 eye" type="password" name="password" ng-model="password" id="password" placeholder="Contraseña" ng-required="requeridoPassword">
+                      
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- <input type="submit" value="INICIAR SESIÓN" ng-click="login();"> -->
+
+            <div class="item-content">
+        <a href="#" class="td-link1">¿Olvidaste tu contraseña?</a>
+
+      </div>
+
+      
+  </div>
+  <!-- <div class="toolbar toolbar-bottom "> -->
+    <div class="buttonbar row no-gutter">
+       <input type="submit" id ="td-bottom" class="colorbtngris1 bt-bottom col-100" value="INICIAR SESIÓN" ng-click="login();">
+    </div>
+  <!-- </div> -->
+
+  </form>
+</div>
+
+
+
+
+
+</div>
+  
+
+

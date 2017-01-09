@@ -1,0 +1,759 @@
+<div data-page="TD_PATIENTS" class="page page-content navbar-fixed block-nav ">
+<!---->
+  <div class="navbar title-bar " id="block-profile">
+    <div class="overlay"></div>
+    <div class="navbar-inner">
+      <div class="left"><a href="index.html" class="back link icon-only"></a></div>
+
+      <div class="center td-nav-center-title ">
+      
+        <h3>Historia Clínica Electrónica</h3>
+      </div>
+      <div class="right"></div>
+    </div>
+
+    <div class="row mas-profile-p">
+      <div class="col-33 btn-back">
+        <a href="" class="button"><span class="icon-group-29"></span></a>
+        Fondo
+        <span class="icon-group-30"></span>
+      </div>
+
+      <div class="col-33 imagen-perfil">
+        <a class="button add-img"><span class="icon-group-29"></span></a>
+      </div>
+
+      <div class="col-33 log">logo</div>
+      <div class="col-100"><h1>Imagen de Perfil<span class="icon-group-30"></span></h1></div>
+    </div>
+
+    <div class="row datos-profile-p">
+      <div class="item-title col-100">Fecha de Nacimiento:</div>
+          <div class="item-inner col-20">
+              <div class="item-input select-item" >
+                  <select name="Día" ng-model="Día" id="Día">
+                    <option value="" disabled selected>Día</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                  </select>
+              </div>
+          </div>
+          <div class="item-inner col-40">
+              <div class="item-input select-item" >
+                  <select name="Mes" ng-model="Mes" id="Mes">
+                    <option value="" disabled selected>Mes</option>
+                    <option value="1">Septiembre</option>
+                    <option value="2">Octubre</option>
+                  </select>
+              </div>
+          </div>
+          <div class="item-inner col-30">
+              <div class="item-input select-item" >
+                  <select name="Año" ng-model="Año" id="Año">
+                    <option value="" disabled selected>Año</option>
+                    <option value="1">1990</option>
+                    <option value="2">1990</option>
+                  </select>
+              </div>
+          </div>
+
+    </div>
+  </div>
+<!---->
+<div class="perfil-clinico">
+  <div class="content-block">
+    <!-- Buttons row as tabs controller -->
+       <div class="buttons-row">
+      <!-- Link to 1st tab, active -->
+      <a href="#tab1" class="tab-link active button">
+          <span class="icon-group-20"></span>
+            Perfil
+      </a>
+      <!-- Link to 2nd tab -->
+      <a href="#tab2" class="tab-link button">
+          <span class="icon-group-23"></span>
+          Estilo de Vida
+      </a>
+      <!-- Link to 3rd tab -->
+      <a href="#tab3" class="tab-link button">
+       <span class="icon-group-21"></span>
+       Antecedentes
+      </a>
+       <a href="#tab4" class="tab-link button">
+        <span class="icon-group-22"></span>
+         Reportes
+       </a>
+    </div>
+  </div>
+  <!-- Tabs, tabs wrapper -->
+  <div class="tabs ">
+    <!-- Tab 1, active by default -->
+    <div id="tab1" class="tab active">
+        <!--tab1-->
+        <div class="list-block td-centrado">
+          <!--<div class="item-content"><h2>Filtro:</h2></div>-->
+              <ul >
+               <li class="text-field">
+                   <div class="row">
+                   <div class="item-inner">
+                      <div class="item-input">
+                          <input class="style login3" type="text" name="" ng-model="" id="" placeholder="Nombre (s)">
+                              <div class="help-block with-errors"></div>
+                        </div>
+                        <span class="icon-group-16"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="text-field">
+                   <div class="row">
+                   <div class="item-inner">
+                      <div class="item-input">
+                          <input class="style login3" type="text" name="" ng-model="" id="" placeholder="Apellido (s)">
+                              <div class="help-block with-errors"></div>
+                        </div>
+                        <span class="icon-group-16"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="especialidad">
+                  <div class="item-content">
+                    <div class="item-inner col-70">
+                     <div class="item-title  label">Género</div> 
+                      <div class="item-input select-item" >
+                        <select name="especialidad" ng-model="especialidad" id="especialidad">
+                          <option value="" disabled selected>Selecciona una…</option>
+                          <option value="1">Especialidad</option>
+                          <option value="2">Especialidad</option>
+                        </select>
+                      <!--</div><i class="icon icon-form-checkbox"></i>-->
+                    </div>
+                  </div>
+                </li>
+
+                 <!-- Slider (Range input) -->
+                      <li class="tarifa">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="row">Peso</div>
+                            
+                            <div class="center"> <code>{{kilogramos}}</code>Kg 
+                            <button type="button" class="edit"></button>
+                            </div>
+                            <div class="item-input">
+                              <div class="range-slider">
+                                <input type="range" name="kilogramos" ng-model="kilogramos" min="{{min}}"  max="{{max}}" >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <!-- Slider (Range input) -->
+                      <li class="tarifa">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="row">Altura</div>
+                            
+                            <div class="center"> <code>{{centimetros}}</code>cms 
+                            <button type="button" class="edit"></button>
+                            </div>
+                            <div class="item-input">
+                              <div class="range-slider">
+                                <input type="range" name="centimetros" ng-model="centimetros" min="{{min}}"  max="{{max}}" >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-70">Alergias</div>
+                           <div class="item-after col-30">
+                            <button class="mas" ng-click="">Agregar</button>
+                           </div>
+                           <div class="item-after col-100 cont-perf-info">Ninguna</div>
+                           <div class="item-after col-100 edit-info">SIN EDICIÓN</div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-70">Condiciones Especiales</div>
+                           <div class="item-after col-30">
+                            <button class="mas" ng-click="">Agregar</button>
+                           </div>
+                           <div class="item-after col-100 cont-perf-info">Ninguna</div>
+                           <div class="item-after col-100 edit-info">SIN EDICIÓN</div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-70">Índice de Masa Corporal</div>
+                           <div class="item-after col-30"></div>
+                            <div class="">
+                          <input class="" type="text" name="Masa" ng-model="Masa" id="Masa" placeholder="- -"></div>
+                           <div class="item-after col-100 edit-info">AUTOMÁTICO</div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Grupo Étnico</div>
+                           <div class="item-after col-10">
+                            <span class="icon-group-16"></span>
+                           </div>
+                           <div class="">
+                          <input class="" type="text" name="Étnico" ng-model="Étnico" id="Étnico" placeholder="Selecciona uno o varios…"></div>
+                           <div class="item-after col-100 edit-info">SIN EDICIÓN</div>
+                          </div>
+                        </div>
+                      </li>
+
+                       <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Lugar de Residencia</div>
+                           <div class="item-after col-10">
+                            <span class="icon-group-16"></span>
+                           </div>
+                           <div class="">
+                          <input class="" type="text" name="Residencia" ng-model="Residencia" id="Residencia" placeholder="Ej. Tlalnepantla, México."></div>
+                           <div class="item-after col-100 edit-info">SIN EDICIÓN</div>
+                          </div>
+                        </div>
+                      </li>
+
+                       <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">C.U.R.P.</div>
+                           <div class="item-after col-10">
+                            <span class="icon-group-16"></span>
+                           </div>
+                           <div class="">
+                          <input class="" type="text" name="CURP…" ng-model="CURP…" id="CURP…" placeholder="Ingresa tu CURP…"></div>
+                           <div class="item-after col-100 edit-info">SIN EDICIÓN</div>
+                          </div>
+                        </div>
+                      </li>
+
+                       <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Teléfono de Contacto</div>
+                           <div class="item-after col-10">
+                            <span class="icon-group-16"></span>
+                           </div>
+                           <div class="">
+                          <input class="" type="text" name="número" ng-model="número" id="número" placeholder="Ingresa un número de contacto…"></div>
+                           <div class="item-after col-100 edit-info">SIN EDICIÓN</div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Correo Electrónico</div>
+                           <div class="item-after col-10">
+                            <span class="icon-group-16"></span>
+                            </div>
+                           <div class="">
+                          <input class="" type="text" name="Correo" ng-model="Correo" id="Correo" placeholder="lore_san88@yahoo.com.mx"></div>
+                           <div class="item-after col-100 edit-info">AUTOMÁTICO</div>
+                          </div>
+                        </div>
+                      </li>
+                      
+              </ul>
+        </div> 
+     
+        <!--tab1-->
+    </div>
+    <!-- Tab 2 -->
+    <div id="tab2" class="tab">
+     <!--tab2-->
+      <div class="list-block td-centrado">
+          <div class="item-content"><h2>Hábitos</h2></div>
+            <ul>
+                  <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Ejercicio</div>
+                           <div class="item-after col-10"></div>
+                           <div class="item-input select-item">
+                            <select name="especialidad" ng-model="especialidad" id="especialidad">
+                                <option value="" disabled selected>5 días por semana</option>
+                                <option value="1">Especialidad</option>
+                                <option value="2">Especialidad</option>
+                              </select>
+                          </div>
+                           <div class="item-after col-100 edit-info">
+                              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+                           </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Dieta</div>
+                           <div class="item-after col-10"></div>
+                           <div class="item-input select-item">
+                            <select name="especialidad" ng-model="especialidad" id="especialidad">
+                                <option value="" disabled selected>5 días por semana</option>
+                                <option value="1">Especialidad</option>
+                                <option value="2">Especialidad</option>
+                              </select>
+                          </div>
+                           <div class="item-after col-100 edit-info">
+                              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+                           </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Alcohól</div>
+                           <div class="item-after col-10"></div>
+                           <div class="item-input select-item">
+                            <select name="especialidad" ng-model="especialidad" id="especialidad">
+                                <option value="" disabled selected>5 días por semana</option>
+                                <option value="1">Especialidad</option>
+                                <option value="2">Especialidad</option>
+                              </select>
+                          </div>
+                           <div class="item-after col-100 edit-info">
+                              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+                           </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Tabaco</div>
+                           <div class="item-after col-10"></div>
+                           <div class="item-input select-item">
+                            <select name="especialidad" ng-model="especialidad" id="especialidad">
+                                <option value="" disabled selected>5 días por semana</option>
+                                <option value="1">Especialidad</option>
+                                <option value="2">Especialidad</option>
+                              </select>
+                          </div>
+                           <div class="item-after col-100 edit-info">
+                              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+                           </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Preferencia Sexual</div>
+                           <div class="item-after col-10"></div>
+                           <div class="item-input select-item">
+                            <select name="especialidad" ng-model="especialidad" id="especialidad">
+                                <option value="" disabled selected>5 días por semana</option>
+                                <option value="1">Especialidad</option>
+                                <option value="2">Especialidad</option>
+                              </select>
+                          </div>
+                           <div class="item-after col-100 edit-info">
+                              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+                           </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Drogas</div>
+                           <div class="item-after col-10"></div>
+                           <div class="item-input select-item">
+                            <select name="especialidad" ng-model="especialidad" id="especialidad">
+                                <option value="" disabled selected>5 días por semana</option>
+                                <option value="1">Especialidad</option>
+                                <option value="2">Especialidad</option>
+                              </select>
+                          </div>
+                           <div class="item-after col-100 edit-info">
+                              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+                           </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <div class="item-content"><h2>Entorno Social</h2></div>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Estado Civil</div>
+                           <div class="item-after col-10"></div>
+                           <div class="item-input select-item">
+                            <select name="especialidad" ng-model="especialidad" id="especialidad">
+                                <option value="" disabled selected>5 días por semana</option>
+                                <option value="1">Especialidad</option>
+                                <option value="2">Especialidad</option>
+                              </select>
+                          </div>
+                           <div class="item-after col-100 edit-info">
+                              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+                           </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Nivel de Educación</div>
+                           <div class="item-after col-10"></div>
+                           <div class="item-input select-item">
+                            <select name="especialidad" ng-model="especialidad" id="especialidad">
+                                <option value="" disabled selected>5 días por semana</option>
+                                <option value="1">Especialidad</option>
+                                <option value="2">Especialidad</option>
+                              </select>
+                          </div>
+                           <div class="item-after col-100 edit-info">
+                              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+                           </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Actividad y/o Área Laboral</div>
+                           <div class="item-after col-10">
+                            <span class="icon-group-16"></span>
+                            </div>
+                           <div class="col-100">
+                          <input class="" type="text" name="Correo" ng-model="Correo" id="Correo" placeholder="Director Editorial, Publicidad"></div>
+                           <div class="item-after col-100 edit-info">AUTOMÁTICO</div>
+                          </div>
+                        </div>
+                      </li>
+
+
+              </ul>
+          </div>       
+     <!--tab2-->
+    </div>
+    <div id="tab3" class="tab">
+     <!---->
+     <div class="list-block td-centrado">
+          <div class="item-content"><h2>Antecedentes Mórbidos</h2><span class="icon-group-30"></div>
+                <ul>
+                    <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-70">Enfermedades Graves</div>
+                           <div class="item-after col-30">
+                            <button class="mas" ng-click="">Agregar</button>
+                           </div>
+                           <div class="col-100">
+                          <input class="" type="text" name="Correo" ng-model="Correo" id="Correo" placeholder="Hepatitis C, Edad 22"></div>
+                           <div class="item-after col-100 edit-info">ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM</div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-70">Operaciones</div>
+                           <div class="item-after col-30">
+                            <button class="mas" ng-click="">Agregar</button>
+                           </div>
+                           <div class="col-100">
+                          <input class="" type="text" name="Correo" ng-model="Correo" id="Correo" placeholder="Hepatitis C, Edad 22"></div>
+                           <div class="item-after col-100 edit-info">ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM</div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-70">Traumatismos</div>
+                           <div class="item-after col-30">
+                            <button class="mas" ng-click="">Agregar</button>
+                           </div>
+                           <div class="col-100">
+                          <input class="" type="text" name="Correo" ng-model="Correo" id="Correo" placeholder="Hepatitis C, Edad 22"></div>
+                           <div class="item-after col-100 edit-info">ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM</div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <div class="item-content"><h2>Antecedentes Familiares</h2></div>
+
+                       <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-70">Enfermedades</div>
+                           <div class="item-after col-30">
+                            <button class="mas" ng-click="">Agregar</button>
+                           </div>
+                           <div class="col-100">
+                          <input class="" type="text" name="Correo" ng-model="Correo" id="Correo" placeholder="Hepatitis C, Edad 22"></div>
+                           <div class="item-after col-100 edit-info">ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM</div>
+                          </div>
+                        </div>
+                      </li>
+
+                       <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-70">Fallecimientos</div>
+                           <div class="item-after col-30">
+                            <button class="mas" ng-click="">Agregar</button>
+                           </div>
+                           <div class="col-100">
+                          <input class="" type="text" name="Correo" ng-model="Correo" id="Correo" placeholder="Hepatitis C, Edad 22"></div>
+                           <div class="item-after col-100 edit-info">ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM</div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <div class="item-content"><h2>Antecedentes Ginecoobstétricos</h2></div>
+
+                      <!-- Slider (Range input) -->
+                      <li class="tarifa">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="row">Edad en la que comenzó a menstruar:</div>
+                            
+                            <div class="center"> <code>{{edad}}</code>años 
+                            <button type="button" class="edit"></button>
+                            </div>
+                            <div class="item-input">
+                              <div class="range-slider">
+                                <input type="range" name="edad" ng-model="edad" min="{{min}}"  max="{{max}}" >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <!-- Slider (Range input) -->
+                      <li class="tarifa">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="row">Edad en la que dejó de menstruar:</div>
+                            
+                            <div class="center"> <code>{{edad-m}}</code>- - 
+                            <button type="button" class="edit"></button>
+                            </div>
+                            <div class="item-input">
+                              <div class="range-slider">
+                                <input type="range" name="edad-m" ng-model="edad-m" min="{{min}}"  max="{{max}}" >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-70">Embarazos</div>
+                           <div class="item-after col-30">
+                            <button class="mas" ng-click="">Agregar</button>
+                           </div>
+
+                           <div class="row">
+                           <span class="col-10 icon-group-10" style="font-size: 30px; margin-top: 5px; color:#86D66C;"></span>
+                           <div class="col-90">
+                              <input class="" type="text" name="Correo" ng-model="Correo" id="Correo" placeholder="Actualmente Embarazada, Semana 7">
+                          </div>
+                           <div class="item-after col-100 edit-info">ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+                           </div>
+                           </div>
+
+                           <div class="col-100">
+                              <input class="" type="text" name="Correo" ng-model="Correo" id="Correo" placeholder="Cesárea, Edad 32">
+                          </div>
+                           <div class="item-after col-100 edit-info">ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM</div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-90">Métodos Anticonceptivos</div>
+                           <div class="item-after col-10"></div>
+                           <div class="item-input select-item">
+                            <select name="especialidad" ng-model="especialidad" id="especialidad">
+                                <option value="" disabled selected>Ninguno</option>
+                                <option value="1">Especialidad</option>
+                                <option value="2">Especialidad</option>
+                              </select>
+                          </div>
+                           <div class="item-after col-100 edit-info">
+                              ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM
+                           </div>
+                          </div>
+                        </div>
+                      </li>
+
+                       <li class="item-content profile-content">
+                        <div class="item-inner">
+                         <div class="row">
+                           <div class="item-title col-70">Inmunizaciones</div>
+                           <div class="item-after col-30">
+                            <button class="mas" ng-click="">Agregar</button>
+                           </div>
+                           <div class="col-100">
+                          <input class="" type="text" name="Correo" ng-model="Correo" id="Correo" placeholder="Influenza, 08/04/16"></div>
+                           <div class="item-after col-100 edit-info">ÚLTIMA EDICIÓN: 22/08/16, 9:55 AM</div>
+                          </div>
+                        </div>
+                      </li>
+
+
+
+                   </ul>   
+     </div>
+     <!---->
+    </div>
+    <div id="tab4" class="tab">
+     <!--tab4-->
+      <div class="content-block reportes-profile">
+      <div class="row">
+        <div class="col-100">
+          <img src="img/grafica-reportes@2x.png" alt="">
+        </div>
+      </div>
+   
+      <!---->
+        <div class="content-block tabs-reportes">
+          <!-- Buttons row as tabs controller -->
+          <div class="buttons-row center">
+            <!-- Link to 1st tab, active -->
+            <a href="#tab-sinfiltro" class="tab-link  button active">
+            SIN <br> FILTRO</a>
+            <!-- Link to 2nd tab -->
+            <a href="#tab-remota" class="tab-link button">
+              <span class="icon-group-1"></span>
+            </a>
+            <!-- Link to 3rd tab -->
+            <a href="#tab-domicilio" class="tab-link button">
+              <span class="icon-group-2"></span>
+            </a>
+            <!-- Link to 4nd tab -->
+            <a href="#tab-consultorio" class="tab-link button">
+              <span class="icon-group-4"></span>
+            </a>
+          </div>
+        </div>
+        <!-- Tabs, tabs wrapper -->
+        <div class="tabs">
+          <!-- Tab 1, active by default -->
+          <div id="tab-sinfiltro" class="tab active">
+            <div class="list-block">
+              <!---->
+            <ul class="">   
+
+                    <div href="" class="item-content reporte-clinico" >
+                      <div class="item-media">
+                        <span class="icon-group-4"></span>
+                      </div>
+                      <div class="item-inner">
+                       <div class="row">
+                         <div class="item-title col-70">Elisa Rojas Sandoval</div>
+                         <div class="item-after col-30">22/08/16</div>
+                         <div class="item-after col-100">Vómito secundario a sobredisten…</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a href="" class="item-content reporte-clinico" >
+                      <div class="item-media ">
+                        <span class="icon-group-1"></span>
+                      </div>
+                      <div class="item-inner">
+                       <div class="row">
+                         <div class="item-title col-70">Elisa Rojas Sandoval</div>
+                         <div class="item-after col-30">22/08/16</div>
+                         <div class="item-after col-100">Vómito secundario a sobredisten…</div>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="" class="item-content reporte-clinico" >
+                      <div class="item-media ">
+                        <span class="icon-group-2"></span>
+                      </div>
+                      <div class="item-inner">
+                       <div class="row">
+                         <div class="item-title col-70">Elisa Rojas Sandoval</div>
+                         <div class="item-after col-30">22/08/16</div>
+                         <div class="item-after col-100">Vómito secundario a sobredisten…</div>
+                        </div>
+                      </div>
+                    </a>
+                  </ul>
+              <!---->
+            </div>
+          </div>
+          <!-- Tab 2 -->
+          <div id="tab-remota" class="tab">
+            <div class="content-block">
+              <p>This is tab 2 content</p>
+              ...
+            </div>
+          </div>
+          <!-- Tab 3 -->
+          <div id="tab-domicilio" class="tab">
+            <div class="content-block">
+              <p>This is tab 3 content</p>
+              ...
+            </div>
+          </div>
+          <!-- Tab 4 -->
+          <div id="tab-consultorio" class="tab">
+            <div class="content-block">
+              <p>This is tab 4 content</p>
+              ...
+            </div>
+          </div>
+          <!-- Tab 5 -->
+          <div id="tab-mios" class="tab">
+            <div class="content-block">
+              <p>This is tab 5 content</p>
+              ...
+            </div>
+          </div>
+        </div>
+      <!---->
+      
+      
+      </div>
+     <!--tab4-->
+    </div>
+  
+  </div>
+</div>
+
+</div>
