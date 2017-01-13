@@ -32,7 +32,7 @@ angular.module("TopdocApp", [])
 
 
 //RAZIEL   
-/**/var url = "tdp-patients-profile2.html"; 
+/**/var url = "tdp-service1.html"; 
     mainView.router.loadPage(url);
 //RAZIEL   
 
